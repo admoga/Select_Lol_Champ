@@ -1,9 +1,9 @@
 <?php
-    $posicion = array("top",
-        "mid",
-        "jungla",
-        "support",
-        "adc"
+    $posicion = array('top',
+        'mid',
+        'jungla',
+        'support',
+        'adc'
     );
 
     $top = array("Aatrox",
@@ -209,25 +209,37 @@
 
     if($pick_pos==0){
         $pick_champ=array_rand($top, 1);
-    }else if($pick_pos==1){
+        $text_champ=$top[$pick_champ];
+    }
+    else if($pick_pos==1){
         $pick_champ=array_rand($mid, 1);
-    }else if($pick_pos==2){
+        $text_champ=$mid[$pick_champ];
+    }
+    else if($pick_pos==2){
         $pick_champ=array_rand($jungla, 1);
-    }else if($pick_pos==3){
+        $text_champ=$jungla[$pick_champ];
+    }
+    else if($pick_pos==3){
         $pick_champ=array_rand($support, 1);
-    }else if($pick_pos==4){
+        $text_champ=$support[$pick_champ];
+    }
+    else{
         $pick_champ=array_rand($adc, 1);
+        $text_champ=$adc[$pick_champ];
     }
 
-    
 ?>
 
 <html>
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
     <title>Select LoL Champ</title>
 </head>
 <body>
+    <div id="container" align="center">
+        <label id="text">La siguiente partida la deberás jugar con <b><?php echo $text_champ; ?></b> en la posición de <b><?php echo $posicion[$pick_pos]; ?></b></label>
+    </div>
 </body>
 </html>
