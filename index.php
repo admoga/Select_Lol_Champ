@@ -15,6 +15,12 @@
         <div id="text">
             
         </div>
+        <div id="img-container">
+            
+        </div>
+        <div id="builds">
+            
+        </div>
     </div>
 </body>
 </html>

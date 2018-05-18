@@ -1,6 +1,8 @@
 function ChampionSelect() {
 
     $("#text").children("label").remove();
+    $("#img-container").children("img").remove();
+    $("#builds").children("label").remove();
 
     var posicion=['top',
         'mid',
@@ -13,10 +15,10 @@ function ChampionSelect() {
         "Akali",
         "Azir",
         "Camille",
-        "Cho'Gath",
+        "ChoGath",
         "Darius",
         "Diana",
-        "Dr. Mundo",
+        "DrMundo",
         "Ekko",
         "Fiora",
         "Fizz",
@@ -65,7 +67,7 @@ function ChampionSelect() {
         "Akali",
         "Anivia",
         "Annie",
-        "Aurelion Sol",
+        "AurelionSol",
         "Azir",
         "Brand",
         "Cassiopeia",
@@ -92,7 +94,7 @@ function ChampionSelect() {
         "Swain",
         "Syndra",
         "Talon",
-        "Twisted Fate",
+        "TwistedFate",
         "Veigar",
         "VelKoz",
         "Viktor",
@@ -106,7 +108,7 @@ function ChampionSelect() {
 
     var jungla=["Amumu",
         "Camille",
-        "Cho'Gath",
+        "ChoGath",
         "Diana",
         "Elise",
         "Evelynn",
@@ -115,21 +117,21 @@ function ChampionSelect() {
         "Graves",
         "Hecarim",
         "Ivern",
-        "Jarvan IV",
+        "JarvanIV",
         "Jax",
-        "Kai'Sa",
+        "KaiSa",
         "Kayn",
-        "Kha'Zix",
+        "KhaZix",
         "Kindred",
-        "Lee Sin",
-        "Maestro Yi",
+        "LeeSin",
+        "MasterYi",
         "Maokai",
         "Nidalee",
         "Nocturne",
         "Nunu",
         "Olaf",
         "Rammus",
-        "Rek'Sai",
+        "RekSai",
         "Rengar",
         "Sejuani",
         "Shaco",
@@ -143,14 +145,14 @@ function ChampionSelect() {
         "Volibear",
         "Warwick",
         "Wukong",
-        "Xin Zhao",
+        "XinZhao",
         "Zac"
     ];
 
     var support=["Alistar",
         "Amumu",
         "Annie",
-        "Bardo",
+        "Bard",
         "Blitzcrank",
         "Brand",
         "Braum",
@@ -171,7 +173,7 @@ function ChampionSelect() {
         "Shen",
         "Sona",
         "Soraka",
-        "Tahm Kench",
+        "TahmKench",
         "Taric",
         "Teemo",
         "Thresh",
@@ -189,13 +191,13 @@ function ChampionSelect() {
         "Ezreal",
         "Jhin",
         "Jinx",
-        "Kai'Sa",
+        "Kaisa",
         "Kalista",
         "Kayle",
         "Kennen",
-        "Kog'Maw",
+        "KogMaw",
         "Lucian",
-        "Miss Fortune",
+        "MissFortune",
         "Quinn",
         "Sivir",
         "Teemo",
@@ -224,5 +226,8 @@ function ChampionSelect() {
         pick_champ=adc[Math.floor(Math.random() * adc.length)];
     }
 
-    $("#text").append('<label>En la siguiente partida deberas jugar con '+pick_champ+' en la posición de '+pick_pos+'</label>')
+    $("#text").append('<label>En la siguiente partida deberas jugar con '+pick_champ+' en la posición de '+pick_pos+'</label>');
+    $("#img-container").append('<img id="img-champ" src="assets/img/champions/'+pick_champ+'.jpg">');
+    $("#builds").append('<label>Puedes buscar una build competente pulsando <a href="http://www.probuilds.net/champions/details/'+pick_champ+'">aquí</a></label>');
+
 }
